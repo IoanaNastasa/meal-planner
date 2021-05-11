@@ -25,13 +25,20 @@ router.get('/:name', auth, async (req,res) => {
         populate: [{
           path: 'recipe',
           model: 'recipe',
-          populate: {
+          populate: [{
             path: 'ingredients',
             populate: {
               path: 'ingredientID',
               model: 'ingredient'
             },
           },
+          {
+            path: 'ingredients',
+            populate: {
+              path: 'unitID',
+              model: 'unit'
+            },
+          }],
         }]
       }
     };
