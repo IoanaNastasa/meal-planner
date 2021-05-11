@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-btn {
+  @apply uppercase tracking-wide font-semibold text-green-500;
+}
+
+.card-input {
+  @apply bg-gray-100 p-2 rounded border border-gray-200 w-full focus:border-black;
+}
+
+.card-input-search {
+  @apply bg-gray-100 p-2 border-b-2 border-green-500 mb-5 focus:border-black;
+}
